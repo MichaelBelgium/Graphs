@@ -1,10 +1,11 @@
 <?php
- 	define("EMAIL", "michaelvrld@gmail.com");
- 	define("PASS", "KIRSTEN2");
- 	define("API_KEY", "4ndf0et5cy9tjd8x9bj409xk90f3mp1m");
+ 	define("EMAIL", "");
+ 	define("PASS", "");
+ 	define("API_KEY", "");
+ 	define("CHECK_ID", 0);
   	
     $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, "https://api.pingdom.com/api/2.0/summary.performance/1530487?includeuptime=true&resolution=day");
+    curl_setopt($curl, CURLOPT_URL, "https://api.pingdom.com/api/2.0/summary.performance/".CHECK_ID."?includeuptime=true&resolution=day");
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
     curl_setopt($curl, CURLOPT_USERPWD, EMAIL.":".PASS);
     curl_setopt($curl, CURLOPT_HTTPHEADER, array("App-Key: ".API_KEY));
