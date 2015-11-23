@@ -42,5 +42,7 @@ If you're missing a file or so;
 
 The rest should be self-explanatory
 
-
+<h1>Examples</h1>
+<a href="http://pat.exp-gaming.net/graph.php?table=false">(Google) Here an example with the knob</a><br>
+<a href="http://pat.exp-gaming.net/graph.php">(Google)  Here an example with the table (default)</a>
 
