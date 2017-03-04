@@ -1,10 +1,10 @@
 <?php
-    include 'inc/SACNRMonitor.php';
+    include 'monitor.class.php';
 
-    define("SERVER_ID", 1742168);
+    define("SERVER_ID", 1788032);
     define("PAST_HOURS", 12);
 
-    $monitor = new SACNRMonitor;
+    $monitor = new SACNR\Monitor;
     $json_query = json_encode((array)$monitor->get_query_by_id(SERVER_ID));
 ?>
 <!DOCTYPE html>

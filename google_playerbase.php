@@ -1,23 +1,11 @@
 <?php
-    /* UPDATE 24/12/2014:
-     * Fixed the using_table part
-     * Added another table using more server info from SACNR monitor
-     * 
-     * UPDATE 13/02/2014:
-     * Improved variable usage
-	 *
- 	 * UPDATE 17/04/2014:
- 	 * When setting using_table to false it will show an animated knob instead. (https://github.com/aterrien/jQuery-Knob)
- 	 * An optional get parameter added for either using a table or displaying the knob
-     * */
+	include "monitor.class.php";
 
-	include "SACNRMonitor.php";
-
-	$serverid = 1638985;    // SACNR Server ID | http://monitor.sacnr.com/server-<here is an id>.html
+	$serverid = 1788032;    // SACNR Server ID | http://monitor.sacnr.com/server-<here is an id>.html
 	$hours = 24;            // how much past hours should the graph show the playerbase. Max value = 44 !
 	$using_table = (isset($_GET["table"]) && $_GET["table"] == "false") ? false : true;    //Display a detailed table under it ? true or false
 
-	$monitor = new SACNRMonitor;
+	$monitor = new SACNR\Monitor;
     $json_query = json_encode((array)$monitor->get_query_by_id($serverid));
     $json_info = json_encode((array)$monitor->get_info_by_id($serverid));
 
